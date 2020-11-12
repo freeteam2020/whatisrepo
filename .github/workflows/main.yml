@@ -28,7 +28,7 @@ jobs:
           curl \
           -X POST \
           -H "Accept: application/vnd.github.v3+json" \
-          -H "authorization: Bearer ${{secrets.TEAM_TOKEN}}" \
+          -H "authorization: ${{secrets.TEAM_CLIENT_ID}} ${{secrets.TEAM_TOKEN}}" \
           ${{env.ISSUE_URL}} \
           -d '{"title":"test use: ${{github.event.head_commit.message}}", \
           "body": "[查看详情](${{env.URL_ROOT}}/actions/runs/${{github.run_id}})", \
