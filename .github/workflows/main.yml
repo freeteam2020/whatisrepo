@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ISSUE_URL: https://api.github.com/repos/${{github.repository}}/issues
-      URL_ROOT: https://github.com/repos/${{github.repository}}
+      URL_ROOT: https://github.com/${{github.repository}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
