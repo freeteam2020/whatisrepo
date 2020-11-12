@@ -30,4 +30,6 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "authorization: Bearer ${{secrets.PERSONAL_TOKEN}}" \
           ${{env.ISSUE_URL}} \
-          -d '{"title":"test use: ${{github.event.head_commit.message}}",  "body": "[查看详情](${{env.URL_ROOT}}/actions/runs/${{github.run_id}})", "assignees": ["${{github.event.head_commit.author.username}}"]}'
+          -d '{"title":"test use: ${{github.event.head_commit.message}}",'\
+'"body": "[查看详情](${{env.URL_ROOT}}/actions/runs/${{github.run_id}})",'\
+'"assignees": ["${{github.event.head_commit.author.username}}"]}'
